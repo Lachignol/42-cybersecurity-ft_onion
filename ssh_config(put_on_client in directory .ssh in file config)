@@ -1,0 +1,51 @@
+Host *.onion
+	# port 9050 pour tor cli
+    # ProxyCommand nc -X 5 -x 127.0.0.1:9050 %h %p
+	# port 9150 pour tor par tor browser
+    ProxyCommand nc -X 5 -x 127.0.0.1:9150 %h %p
+    	#port ssh choisi sur le serveur
+    Port 4242
+    	# user defini 
+    User onionuser
+    	# user defini 
+    IdentityFile ~/.ssh/ft_onion_key
+        # fait en sorte de ne pas faire de requete dns (pour pas etre visible par le FAI) un peu pour les parano
+    VerifyHostKeyDNS no
+    	# si vraiment vraiment parano on met a yes pour verifier la clef du host si elle est  ~/.ssh/known_hosts (fichier utilisateur) ou dans /etc/ssh/ssh_known_hosts (fichier système) 
+	#si on le met pas par default set sur ask donc demande a la premiere connexion
+    # StrictHostKeyChecking yes
+
+
+Méthode recommandée toujours pour ajouter a known_host si parano
+--------------------------------------------------------------------------
+Utilisez ssh-keyscan pour récupérer la clé publique de l'hôte distant et l'ajouter directement :
+
+ssh-keyscan -H nom-du-serveur >> ~/.ssh/known_hosts
+L'option -H hache le nom d'hôte pour la confidentialité.
+
+Exécutez depuis votre machine client, sans être connecté.
+
+Vérification et permissions
+Vérifiez le contenu : cat ~/.ssh/known_hosts.
+
+Permissions requises : chmod 700 ~/.ssh et chmod 644 ~/.ssh/known_hosts.
+
+Si hachage activé (HashKnownHosts yes), re-hachez : ssh-keygen -Hf ~/.ssh/known_hosts.
+
+Alternative interactive
+Connectez-vous simplement en SSH une première fois avec StrictHostKeyChecking ask : la clé s'ajoute automatiquement après confirmation.
+
+--------------------------------------------------------------------------
+
+Si on veu pas set cela dans .ssh/config plusieur alternative:
+1) Example avec netcat
+ ssh -o ProxyCommand="nc -X 5 -x 127.0.0.1:9150 %h %p" -i ~/.ss
+h/ft_onion_key -p 4242 onionuser@adresse.notion
+
+2) torify
+torify ssh utilisateur@adresse-du-serveur
+
+3) torsocks
+torsocks ssh utilisateur@adresse-du-serveur
+
+

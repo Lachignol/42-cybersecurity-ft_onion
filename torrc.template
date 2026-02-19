@@ -1,0 +1,16 @@
+# Service Web
+HiddenServiceDir /var/lib/tor/web/
+HiddenServiceVersion 3
+HiddenServicePort __WEB_PORT__ 127.0.0.1:__WEB_PORT__
+
+# Service SSH
+HiddenServiceDir /var/lib/tor/ssh/
+HiddenServiceVersion 3
+HiddenServicePort __SSH_PORT__ 127.0.0.1:__SSH_PORT__
+
+# Logs pour debug
+Log notice file /var/log/tor/notices.log
+
+# Limitation bande passante (100 KB/s normal, 200 KB/s burst)
+BandwidthRate 100 KB
+BandwidthBurst 200 KB

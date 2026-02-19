@@ -1,0 +1,26 @@
+server {
+    listen __WEB_PORT__;
+    listen [::]:__WEB_PORT__;
+
+    root /var/www/html;
+    index index.html index.htm;
+
+    # Sécurité: Cacher la version nginx
+    server_tokens off;
+
+    # Headers de sécurité HTTP
+    add_header X-Frame-Options "DENY" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "no-referrer" always;
+
+    # Limites de sécurité
+    client_max_body_size 1M;
+    client_body_timeout 10s;
+    client_header_timeout 10s;
+    send_timeout 10s;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

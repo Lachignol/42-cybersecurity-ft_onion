@@ -1,0 +1,27 @@
+Port __SSH_PORT__
+ListenAddress 127.0.0.1
+
+# Authentification
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+PubkeyAcceptedKeyTypes +ssh-ed25519
+PasswordAuthentication no
+PermitEmptyPasswords no
+PermitRootLogin prohibit-password
+
+# Restriction utilisateur
+AllowUsers __SSH_USER__
+
+# Securite anti-bruteforce
+MaxAuthTries 3
+LoginGraceTime 30
+
+# Gestion sessions inactives (deconnexion apres 10 minutes: 300s * 2 = 600s)
+ClientAliveInterval 300
+ClientAliveCountMax 2
+
+# Logs
+LogLevel VERBOSE
+
+# Subsystems
+Subsystem sftp /usr/lib/openssh/sftp-server
