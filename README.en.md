@@ -6,15 +6,15 @@
 
 ## 📚 Table of Contents
 
-- [Description](#description)
-- [Prerequisites](#prerequisites)
-- [Step-by-Step Installation](#step-by-step-installation)
-- [Usage](#usage)
-- [Advanced Configuration](#advanced-configuration)
-- [Service Access](#service-access)
-- [Available Commands](#available-commands)
-- [Troubleshooting](#troubleshooting)
-- [Security](#security)
+- [Description](#-description)
+- [Prerequisites](#-prerequisites)
+- [Step-by-Step Installation](#-step-by-step-installation)
+- [Usage](#-usage)
+- [Advanced Configuration](#-advanced-configuration)
+- [Service Access](#-service-access)
+- [Available Commands](#-available-commands)
+- [Troubleshooting](#-troubleshooting)
+- [Security](#-security)
 
 ---
 
