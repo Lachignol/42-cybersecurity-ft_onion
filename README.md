@@ -6,15 +6,15 @@
 
 ## 📚 Table des matières
 
-- [Description](#description)
-- [Prérequis](#prérequis)
-- [Installation pas à pas](#installation-pas-à-pas)
+- [Description](#-description)
+- [Prérequis](#-prérequis)
+- [Installation pas à pas](#-installation-pas-à-pas)
 - [Utilisation](#-utilisation)
-- [Configuration avancée](#configuration-avancée)
-- [Accès au service](#accès-au-service)
-- [Commandes disponibles](#commandes-disponibles)
-- [Troubleshooting](#troubleshooting)
-- [Sécurité](#sécurité)
+- [Configuration avancée](#-configuration-avancée)
+- [Accès au service](#-accès-au-service)
+- [Commandes disponibles](#-commandes-disponibles)
+- [Troubleshooting](#-troubleshooting)
+- [Sécurité](#-sécurité)
 
 ---
 
