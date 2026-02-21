@@ -9,7 +9,7 @@
 - [Description](#description)
 - [Prérequis](#prérequis)
 - [Installation pas à pas](#installation-pas-à-pas)
-- [Utilisation](#utilisation)
+- [Utilisation](#-utilisation)
 - [Configuration avancée](#configuration-avancée)
 - [Accès au service](#accès-au-service)
 - [Commandes disponibles](#commandes-disponibles)
