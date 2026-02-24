@@ -1,6 +1,6 @@
 server {
-    listen __WEB_PORT__;
-    listen [::]:__WEB_PORT__;
+    listen 127.0.0.1:__WEB_PORT__;
+    listen [::1]:__WEB_PORT__;   
 
     root /var/www/html;
     index index.html index.htm;
