@@ -175,7 +175,8 @@ xyz789uvw456rst123def.onion
    http://votre-adresse.onion
    ```
 
-Vous devriez voir la page HTML simple : "test"
+Vous devriez voir la page HTML simple : "test"*
+*Sauf si vous avez déjà mis vos propres pages dans le dossier /html du dépôt. 
 
 ### Se connecter en SSH
 
