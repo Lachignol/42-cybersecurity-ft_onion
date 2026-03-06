@@ -100,7 +100,7 @@ make generate_key
 ```bash
 make
 ```
-Vous pouvez directement passer a [Utilisation](#utilisation)
+Vous pouvez directement passer a [Utilisation](#-utilisation)
 
 #### Methode 2 : Build de l'image Docker
 
